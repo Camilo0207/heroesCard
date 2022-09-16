@@ -1,0 +1,41 @@
+.login {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: yellow; */
+}
+
+.box {
+  width: 45%;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px 0 5px 0;
+}
+h2 {
+  font-size: 50px;
+}
+p {
+  text-align: center;
+}
+
+.button {
+  background-color: #1cd1b0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}

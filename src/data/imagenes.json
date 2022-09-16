@@ -1,0 +1,106 @@
+{
+
+    "backGround":[
+        {
+            "id":1,
+            "url":"https://i.imgur.com/LasbW7A.png",
+            "info":"backGround"
+        },
+        {
+            "id":2,
+            "url":"https://i.imgur.com/eJVADKD.png",
+            "info":"backGround"
+    
+        },
+        {
+            "id":3,
+            "url":"https://i.imgur.com/EgLom1K.png",
+            "info":"backGround"
+    
+        },
+        {
+            "id":4,
+            "url":"https://i.imgur.com/OTWezz9.png",
+            "info":"backGround"
+    
+        },
+        {
+            "id":5,
+            "url":"https://i.imgur.com/RkGKG6d.jpg",
+            "info":"backGround"
+    
+        },
+        {
+            "id":6,
+            "url":"https://i.imgur.com/cTU6WPC.jpg",
+            "info":"backGround"
+    
+        },
+        {
+            "id":7,
+            "url":"https://i.imgur.com/Oq3lhuX.jpg",
+            "info":"backGround"
+    
+        },
+        {
+            "id":8,
+            "url":"https://i.imgur.com/Ih0nzpY.jpg",
+            "info":"backGround"
+    
+        },
+        {
+            "id":9,
+            "url":"https://i.imgur.com/MgnbKwK.jpg",
+            "info":"backGround"
+    
+        }
+    ],
+    "imgProfile":[
+        {
+            "id":1,
+            "url":"https://i.imgur.com/vU4ILyX.png",
+            "info":"img"
+        },
+        {
+            "id":2,
+            "url":"https://i.imgur.com/3AKOT4H.png",
+            "info":"img"
+    
+        },
+        {
+            "id":3,
+            "url":"https://i.imgur.com/tXnBMkh.png",
+            "info":"img"
+    
+        },
+        {
+            "id":4,
+            "url":"https://i.imgur.com/CKmVDWs.png",
+            "info":"img"
+
+        },{
+            "id":5,
+            "url":"https://i.imgur.com/a7ur78C.jpg",
+            "info":"img"
+    
+        },
+        {
+            "id":6,
+            "url":"https://i.imgur.com/VCxmKWo.jpg",
+            "info":"img"
+    
+        },
+        {
+            "id":7,
+            "url":"https://i.imgur.com/i4vOfos.jpg",
+            "info":"img"
+    
+        },
+        {
+            "id":8,
+            "url":"https://i.imgur.com/7r5CHyG.jpg",
+            "info":"img"
+    
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+}
+
+.box {
+  margin: 45px 0;
+  width: 45%;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px 0 5px 0;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 13px;
+}
+
+.buttons input{
+  width: 40%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 40px;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.reset{
+  background-color: rgb(136,136,136);
+  color: white;
+}
+
+.newUser{
+  background-color: rgb(28,209,176);
+}
+
+p{
+  font-size: 18px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 5px;
+}
+
+.loading{
+  font-size: 40px;
+}

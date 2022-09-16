@@ -1,0 +1,20 @@
+.options {
+  margin: 4px 20px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  align-items: flex-end;
+  border-radius: 10px;
+}
+
+.options img {
+  width: inherit;
+  height: 100px;
+  border-radius: 10px;
+
+}
+
+.options input{
+  cursor: pointer;
+}

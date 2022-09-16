@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./routes/Home";
+import NotFound from "./routes/NotFound";
+import { Login } from "./routes/Login";
+import Footer from "./components/Footer";
+import CrearCuenta from "./routes/CrearCuenta";
+import { useApi } from "./hooks/useApi";
+import CrearHeroe from "./routes/CrearHeroe";
 
 function App() {
+  const urlUsuarios = "http://localhost:5000/usuariosCreados";
+  const usuarios = useApi(urlUsuarios);
+  const urlHeroes = "http://localhost:5000/heroes";
+  const heroes = useApi(urlHeroes);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Login db={usuarios.db} />}></Route>
+          <Route path="/home" element={<Home db={heroes.db } deleteData={heroes.deleteData}/>}></Route>
+          <Route
+            path="/crearCuenta"
+            element={
+              <CrearCuenta createData={usuarios.createData} db={usuarios.db} />
+            }
+          ></Route>
+          <Route path="/crearHeroe" element={<CrearHeroe createData={heroes.createData}/>}></Route>
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
-
 export default App;

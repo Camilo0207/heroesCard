@@ -1,0 +1,69 @@
+section article {
+  position: relative;
+  width: 17.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eceaea;
+  margin: 0.625em;
+  border-radius: 5% 5% 0% 0%;
+  
+}
+
+article .fondoHeroe {
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  border-radius: 5% 5% 0% 0%;
+}
+article .logoCorazon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.9375em;
+}
+
+article .logoCorazon img {
+  height: 1.5625em;
+  width: 1.5625em;
+  z-index: 998;
+}
+article .logoCorazon .delete{
+  height: 32px;
+  width: 32px;
+  z-index: 998;
+  cursor:pointer;
+}
+article .logoHeroe {
+  width: 7.8125em;
+  height: 7.8125em;
+  border-radius: 50%;
+  z-index: 1;
+  margin-top: 3.75em;
+  margin-bottom: 0.625em;
+}
+article h2 {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 0.625em;
+  font-size: 24px;
+}
+article p {
+  padding: 1.25em;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875em;
+  height: 13.125em;
+}
+article button {
+  background: #00669f;
+  padding: 0.625em 1.875em;
+  margin-bottom: 0.9375em;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875em;
+  color: #f3f3f3;
+  cursor: pointer;
+}

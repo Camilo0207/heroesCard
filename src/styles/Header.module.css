@@ -1,0 +1,19 @@
+.headerParrafo{
+    background-color: #1CD1B0;
+    padding: 3px 20px;
+    display: flex;
+}
+
+.headerLogo{
+    background-color: #00669F;
+    padding: 7px 0 3px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo p{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 20px;
+}
