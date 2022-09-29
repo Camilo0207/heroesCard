@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../styles/SelectElement.module.css"
-export default function SelectElement({ item, onChange,onBlur }) {
-
+export default function SelectElement({ item, onChange,onBlur}) {
   return (
     <div className={styles.options}>
       <input
@@ -10,9 +9,11 @@ export default function SelectElement({ item, onChange,onBlur }) {
         value={`${item.url}`}
         onChange={onChange}
         onBlur={onBlur}
-        
+        id={`${item.url}`}
       />
-      <img src={`${item.url}`} alt={`${item.info}`} />
+      <label htmlFor={`${item.url}`}>
+        <img src={`${item.url}`} alt={`${item.info}`} />
+      </label>
     </div>
   );
 }

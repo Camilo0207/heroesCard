@@ -6,59 +6,6 @@
     
 }
 
-.mainBox .formBox{
-    width: 50%;
-    /* border: solid; */
-    margin: 80px 0;
-}
-.mainBox .formBox form{
-    display: flex;
-    flex-direction: column;
-}
-.mainBox .formBox form .escoger{
-    border: solid 1px;
-    cursor: pointer;
-    padding: 10px;
-    margin: 15px 0 0 0;
-    display: flex;
-    justify-content: space-between;
-}
-.mainBox .formBox form h3{
-    margin: 15px 0 0 0;
-}
-.mainBox .formBox form .boxButtons{
-    margin: 20px 0 0 0;
-    display: flex;
-    justify-content: center;
-}
-.mainBox .formBox form .button{
-    border-radius: 20px;
-    width: 50%;
-    background-color: #1CD1B0;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.bgImages{
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    height: 200px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
-    border: solid 1px black;
-}
-
-.mainBox .formBox form textarea{
-    resize:none;
-    padding: 5px;
-}
-.mainBox .formBox form .error{
-    color: red;
-}
-
 .navBox{
     display: flex;
     justify-content: right;

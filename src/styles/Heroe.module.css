@@ -7,7 +7,8 @@ section article {
   background: #eceaea;
   margin: 0.625em;
   border-radius: 5% 5% 0% 0%;
-  
+  /* background: black;
+  border: solid white 0.5px; */
 }
 
 article .fondoHeroe {
@@ -29,11 +30,11 @@ article .logoCorazon img {
   width: 1.5625em;
   z-index: 998;
 }
-article .logoCorazon .delete{
+article .logoCorazon .delete {
   height: 32px;
   width: 32px;
   z-index: 998;
-  cursor:pointer;
+  cursor: pointer;
 }
 article .logoHeroe {
   width: 7.8125em;
@@ -49,6 +50,7 @@ article h2 {
   font-weight: normal;
   margin-bottom: 0.625em;
   font-size: 24px;
+ 
 }
 article p {
   padding: 1.25em;
@@ -67,3 +69,13 @@ article button {
   color: #f3f3f3;
   cursor: pointer;
 }
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+

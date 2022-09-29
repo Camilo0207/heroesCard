@@ -1,20 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "../styles/Login.module.css";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { helpValidaciones } from "../helpers/helpValidaciones";
+import { useApi } from "../hooks/useApi";
+import LoginForm from "../components/LoginForm";
+import ThemeContext from "../context/ThemeContext";
 
 const initialForm = {
   email: "",
   password: "",
 };
 
-export const Login = ({db}) => {
+export const Login = () => {
+  const { db } = useApi("http://localhost:5000/usuariosCreados");
   const [form, setForm] = useState(initialForm);
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
-  const {validarLogin}=helpValidaciones()
-  
+  const { validarLogin } = helpValidaciones();
+  const {theme} = useContext(ThemeContext)
+
+
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -25,7 +30,7 @@ export const Login = ({db}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newErrors = validarLogin(form,db);
+    const newErrors = validarLogin(form, db);
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
@@ -35,35 +40,14 @@ export const Login = ({db}) => {
     }
   };
 
-  
-
   return (
-    <div className={styles.login}>
-      <div className={styles.box}>
-        <h2>Login</h2>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <input
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder={"ejemplo@gmail.com"}
-          />
-          {errors.email && <p className={styles.error}>{errors.email}</p>}
-          <input
-            type={"password"}
-            name="password"
-            value={form.password}
-            onChange={handleChange}
-            placeholder={"Contraseña"}
-          />
-          {errors.password && <p className={styles.error}>{errors.password}</p>}
-
-          <input className={styles.button} type={"submit"} value={"Entrar"} />
-        </form>
-        <p>
-          ¿No tenés una cuenta? {<Link to={"/crearCuenta"}>Registrarme</Link>} 
-        </p>
-      </div>
+    <div className={`${styles.login} ${theme==="dark" && "darkMode"}`}>
+      <LoginForm
+        errors={errors}
+        onSubmit={handleSubmit}
+        onChange={handleChange}
+        form={form}
+      />
     </div>
   );
 };

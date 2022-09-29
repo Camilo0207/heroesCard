@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Heroe from "../components/Heroe";
 import styles from "../styles/Home.module.css";
-import { useModal } from "../hooks/useModal";
-import ModalPortal from "../components/ModalPortal";
+import { useApi } from "../hooks/useApi";
+import ThemeContext from "../context/ThemeContext";
 
-export default function Home({ db, deleteData }) {
+export default function Home() {
+  const { db, deleteData,updateData } = useApi("http://localhost:5000/heroes")
   const [search, setSearch] = useState("");
-  const [isOpenPortal, openModalPortal, closeModalPortal] = useModal(false);
+  const {theme} = useContext(ThemeContext)
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -18,9 +19,9 @@ export default function Home({ db, deleteData }) {
     : db.filter((el) => el.name.toLowerCase().includes(search.toLowerCase()));
 
   return (
-    <div className={styles.home}>
-      <div className={styles.navBox}>
-        <nav>
+    <div className={`${styles.home} ${theme==="dark" && "darkMode"}`}>
+      <div className={`${styles.navBox} ${theme==="dark" && "darkMode"}`}>
+        <nav className={`${theme==="dark" && "darkMode"}`}>
           <Link to={"/"}>Cerrar sesion</Link>
         </nav>
       </div>
@@ -32,7 +33,7 @@ export default function Home({ db, deleteData }) {
       <section>
         {db && encontrarHeroes.length > 0 ? (
           encontrarHeroes.map((el) => (
-            <Heroe key={el.id} heroe={el} openModalPortal={openModalPortal} deleteData={deleteData}/>
+            <Heroe key={el.id} heroe={el}  deleteData={deleteData} updateData={updateData}/>
           ))
         ) : (
           <p
@@ -43,13 +44,6 @@ export default function Home({ db, deleteData }) {
       <Link to={"/crearHeroe"} className={styles.crear}>
         +
       </Link>
-
-      {/* <button onClick={openModalPortal}>Modal en Portal</button> */}
-      <ModalPortal isOpen={isOpenPortal} closeModal={closeModalPortal}>
-        <div className={styles.modal}>
-          <h3>GRACIAS POR USAR LA APP</h3>
-        </div>
-      </ModalPortal>
     </div>
   );
 }

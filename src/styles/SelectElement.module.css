@@ -8,11 +8,11 @@
   border-radius: 10px;
 }
 
-.options img {
-  width: inherit;
+.options img{
+  width: 120px;
   height: 100px;
   border-radius: 10px;
-
+  cursor: pointer;
 }
 
 .options input{

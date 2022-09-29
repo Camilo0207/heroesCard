@@ -4,11 +4,33 @@
     display: flex;
 }
 
+
 .headerLogo{
     background-color: #00669F;
-    padding: 7px 0 3px 10px;
+    padding: 7px 80px 3px 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+}
+.darkOptions{
+    background-color: #7d7d7db6;
+    border-radius: 50%;
+    padding: 19px;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.darkOptions img{
+    width: 27px;
+    height: 27px;
 }
 
 .headerLogo p{
@@ -16,4 +38,9 @@
     font-weight: 400;
     font-size: 30px;
     margin-left: 20px;
+}
+
+
+.darkModeButton{
+    background-color: white;
 }

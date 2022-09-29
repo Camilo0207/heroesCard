@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "../styles/Heroe.module.css";
 
-export default function Heroe({ heroe, openModalPortal, deleteData }) {
+import { useModal } from "../hooks/useModal";
+import ModalPortal from "../components/ModalPortal";
+import CrearHeroeForm from "./CrearHeroeForm";
+import ThemeContext from "../context/ThemeContext";
+
+export default function Heroe({heroe,/*openModalPortal,*/ deleteData,updateData,}) {
+  const [isOpenPortal, openModalPortal, closeModalPortal] = useModal(false);
+  const [config, setConfig] = useState(false);
+  const {theme} = useContext(ThemeContext)
+
+
+  const disableScroll = () => {
+    const x = window.scrollX;
+    const y = window.scrollY;
+    window.onscroll = () => window.scrollTo(x, y);
+  };
+
+  const enableScroll = () => {
+    window.onscroll = null;
+  };
+
+  useEffect(() => {
+    isOpenPortal ? disableScroll() : enableScroll();
+  }, [isOpenPortal]);
+
+  const configurar = () => {
+    setConfig(true);
+    openModalPortal();
+  };
   return (
-    <article>
+    <article className={`${theme==="dark" && "darkMode"}`}>
       <img
         className={styles.fondoHeroe}
         src={heroe.backGround}
@@ -26,7 +54,18 @@ export default function Heroe({ heroe, openModalPortal, deleteData }) {
       />
       <h2>{heroe.name.toUpperCase()}</h2>
       <p>{heroe.info}</p>
-      <button onClick={() => openModalPortal()}>Ver mas</button>
+      <button onClick={configurar}>Configurar</button>
+
+      <ModalPortal isOpen={isOpenPortal} closeModal={closeModalPortal}>
+        <div className={styles.modal}>
+          <CrearHeroeForm
+            config={config}
+            heroe={heroe}
+            updateData={updateData}
+            closeModalPortal={closeModalPortal}
+          />
+        </div>
+      </ModalPortal>
     </article>
   );
 }

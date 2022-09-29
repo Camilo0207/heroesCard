@@ -24,7 +24,6 @@ export const useApi = (url) => {
 
   const createData = (data) => {
     data.id = Date.now();
-    //console.log(data);
 
     let options = {
       body: data,
@@ -32,7 +31,6 @@ export const useApi = (url) => {
     };
 
     api.post(url, options).then((res) => {
-      //console.log(res);
       if (!res.err) {
         setDb([...db, res]);
       } else {
