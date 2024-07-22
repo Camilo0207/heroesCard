@@ -14,7 +14,7 @@ export default function Header() {
       </div>
       <div className={`${styles.headerLogo} ${theme==="dark" && "darkMode"}`}>
         <div className={styles.contenedor}>
-        <img src={"https://i.imgur.com/L1X40JD.png"} alt={"Logo"} />
+        <img src={"https://imgs-herores.s3.amazonaws.com/logo.png"} alt={"Logo"} />
         <p>NOMBRE TIENDA</p>
         </div>
         <div className={`${styles.darkOptions} ${theme==="dark" && styles.darkModeButton}`} >

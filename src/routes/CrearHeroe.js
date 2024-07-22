@@ -4,16 +4,13 @@ import { Link } from "react-router-dom";
 import CrearHeroeForm from "../components/CrearHeroeForm";
 import ThemeContext from "../context/ThemeContext";
 
-
-
 export default function CrearHeroe() {
-  
   const [loading, setLoading] = useState(false);
-  const {theme} = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={`${styles.mainBox} ${theme==="dark" && "darkMode"}`}>
-      <div className={`${styles.navBox} ${theme==="dark" && "darkMode"}`}>
+    <div className={`${styles.mainBox} ${theme === "dark" && "darkMode"}`}>
+      <div className={`${styles.navBox} ${theme === "dark" && "darkMode"}`}>
         <nav>
           <Link to={"/home"}>Home</Link>
         </nav>
@@ -21,9 +18,7 @@ export default function CrearHeroe() {
       {loading ? (
         <p className={styles.loading}>CREANDO NUEVO HEROE...</p>
       ) : (
-        <CrearHeroeForm
-          setLoading={setLoading}
-        />
+        <CrearHeroeForm setLoading={setLoading} />
       )}
     </div>
   );

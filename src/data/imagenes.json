@@ -3,54 +3,54 @@
     "backGround":[
         {
             "id":1,
-            "url":"https://i.imgur.com/LasbW7A.png",
+            "url":"https://imgs-herores.s3.amazonaws.com/fondo-1.png",
             "info":"backGround"
         },
         {
             "id":2,
-            "url":"https://i.imgur.com/eJVADKD.png",
+            "url":"https://imgs-herores.s3.amazonaws.com/fondo-2.png",
             "info":"backGround"
     
         },
         {
             "id":3,
-            "url":"https://i.imgur.com/EgLom1K.png",
+            "url":"https://imgs-herores.s3.amazonaws.com/fondo-3.png",
             "info":"backGround"
     
         },
         {
             "id":4,
-            "url":"https://i.imgur.com/OTWezz9.png",
+            "url":"https://imgs-herores.s3.amazonaws.com/fondo-4.png",
             "info":"backGround"
     
         },
         {
             "id":5,
-            "url":"https://i.imgur.com/RkGKG6d.jpg",
+            "url":"https://imgs-herores.s3.amazonaws.com/fondo-5.jpg",
             "info":"backGround"
     
         },
         {
             "id":6,
-            "url":"https://i.imgur.com/cTU6WPC.jpg",
+            "url":"https://imgs-herores.s3.amazonaws.com/fondo-6.jpg",
             "info":"backGround"
     
         },
         {
             "id":7,
-            "url":"https://i.imgur.com/Oq3lhuX.jpg",
+            "url":"https://imgs-herores.s3.amazonaws.com/fondo-7.jpg",
             "info":"backGround"
     
         },
         {
             "id":8,
-            "url":"https://i.imgur.com/Ih0nzpY.jpg",
+            "url":"https://imgs-herores.s3.amazonaws.com/fondo-8.jpg",
             "info":"backGround"
     
         },
         {
             "id":9,
-            "url":"https://i.imgur.com/MgnbKwK.jpg",
+            "url":"https://imgs-herores.s3.amazonaws.com/fondo-9.jpg",
             "info":"backGround"
     
         }
@@ -58,47 +58,47 @@
     "imgProfile":[
         {
             "id":1,
-            "url":"https://i.imgur.com/vU4ILyX.png",
+            "url":"https://imgs-herores.s3.amazonaws.com/ant-man.jpg",
             "info":"img"
         },
         {
             "id":2,
-            "url":"https://i.imgur.com/3AKOT4H.png",
+            "url":"https://imgs-herores.s3.amazonaws.com/batman.png",
             "info":"img"
     
         },
         {
             "id":3,
-            "url":"https://i.imgur.com/tXnBMkh.png",
+            "url":"https://imgs-herores.s3.amazonaws.com/flash.jpg",
             "info":"img"
     
         },
         {
             "id":4,
-            "url":"https://i.imgur.com/CKmVDWs.png",
+            "url":"https://imgs-herores.s3.amazonaws.com/harleyqueen.png",
             "info":"img"
 
         },{
             "id":5,
-            "url":"https://i.imgur.com/a7ur78C.jpg",
+            "url":"https://imgs-herores.s3.amazonaws.com/mujer-maravilla.png",
             "info":"img"
     
         },
         {
             "id":6,
-            "url":"https://i.imgur.com/VCxmKWo.jpg",
+            "url":"https://imgs-herores.s3.amazonaws.com/spider-man.jpg",
             "info":"img"
     
         },
         {
             "id":7,
-            "url":"https://i.imgur.com/i4vOfos.jpg",
+            "url":"https://imgs-herores.s3.amazonaws.com/superman.png",
             "info":"img"
     
         },
         {
             "id":8,
-            "url":"https://i.imgur.com/7r5CHyG.jpg",
+            "url":"https://imgs-herores.s3.amazonaws.com/thor.jpg",
             "info":"img"
     
         }

@@ -9,65 +9,56 @@
       "id": 1664318091494
     },
     {
-      "name": "angie ",
-      "lastname": "ortiz ",
-      "email": "stefania.ortiz93@gmail.com",
-      "password": "1234",
+      "name": "usuario",
+      "lastname": "nuevo",
+      "email": "ususarionuevo@gmail.com",
+      "password": "123",
       "country": "Colombia",
-      "id": 1664318285091
-    },
-    {
-      "name": "camilo",
-      "lastname": "sanchez",
-      "email": "camilosa@hotmail.com",
-      "password": "1234",
-      "country": "Colombia",
-      "id": 1664324158467
-    },
-    {
-      "name": "kichois",
-      "lastname": "ortiz",
-      "email": "pepa@gmail.com",
-      "password": "1234",
-      "country": "Brasil",
-      "id": 1664410278402
+      "id": 1677018500676
     }
   ],
   "heroes": [
     {
       "id": 1,
       "name": "Batman",
-      "backGround": "https://i.imgur.com/LasbW7A.png",
-      "img": "https://i.imgur.com/vU4ILyX.png",
+      "backGround": "https://imgs-herores.s3.amazonaws.com/fondo-1.png",
+      "img": "https://imgs-herores.s3.amazonaws.com/batman.png",
       "info": "Batman (conocido inicialmente como Bat-Man) es un personaje creado por los estadounidenses Bob Kane y Bill Finger, y propiedad de DC Comics. Apareció por primera vez en la historia titulada «El caso del sindicato químico» de la revista Detective Comics N.º 27, lanzada por la editorial National Publications el 30/3/1939."
     },
     {
       "id": 2,
       "name": "Mujer maravilla",
-      "backGround": "https://i.imgur.com/eJVADKD.png",
-      "img": "https://i.imgur.com/3AKOT4H.png",
+      "backGround": "https://imgs-herores.s3.amazonaws.com/fondo-4.png",
+      "img": "https://imgs-herores.s3.amazonaws.com/mujer-maravilla.png",
       "info": "Es una superheroína creada por William Moulton Marston para la editorial DC Comics. Es una princesa guerrera de las Amazonas, pueblo ficticio basado en el de las amazonas de la mitología griega. En su tierra natal es conocida como la princesa Diana de Temiscira pero fuera de esta utiliza la identidad secreta de Diana Prince."
     },
     {
       "id": 3,
       "name": "Superman",
-      "backGround": "https://i.imgur.com/OTWezz9.png",
-      "img": "https://i.imgur.com/tXnBMkh.png",
+      "backGround": "https://imgs-herores.s3.amazonaws.com/fondo-2.png",
+      "img": "https://imgs-herores.s3.amazonaws.com/superman.png",
       "info": "Es un superhéroe que apareció por primera vez en los cómics estadounidenses publicados por DC Comics. ​El personaje fue creado por el escritor estadounidense Jerry Siegel y el artista canadiense Joe Shuster en 1933 cuando ambos se encontraban viviendo en Cleveland, Ohio."
     },
     {
       "id": 4,
       "name": "Harley queen",
-      "backGround": "https://i.imgur.com/OTWezz9.png",
-      "img": "https://i.imgur.com/CKmVDWs.png",
+      "backGround": "https://imgs-herores.s3.amazonaws.com/fondo-5.jpg",
+      "img": "https://imgs-herores.s3.amazonaws.com/harleyqueen.png",
       "info": "Harley Quinn es un personaje ficticio creado por los estadounidenses Paul Dini y Bruce Timm para la editorial DC Comics. Quinn hizo su debut en el vigésimo-segundo episodio de Batman: la serie animada, «El favor del Joker», en septiembre de 1992 y se convirtió en una villana recurrente en la serie"
     },
     {
       "id": 1663282288019,
-      "name": "Ant Man",
-      "backGround": "https://i.imgur.com/Oq3lhuX.jpg",
-      "img": "https://i.imgur.com/i4vOfos.jpg",
+      "name": "Antman",
+      "backGround": "https://imgs-herores.s3.amazonaws.com/fondo-9.jpg",
+      "img": "https://imgs-herores.s3.amazonaws.com/ant-man.jpg",
       "info": "Ant-Man (Ant-Man: El Hombre Hormiga en América Hispana) es una película de superhéroes basada en el superhéroe de Marvel Comics del mismo nombre. Se trata de la décimo segunda entrega del Universo Cinematográfico de Marvel y de la Saga del Infinito, así como de la sexta y última entrega de la Fase Dos."
+    },
+    {
+      "name": "nuevo heroe",
+      "backGround": "https://imgs-herores.s3.amazonaws.com/fondo-9.jpg",
+      "img": "https://imgs-herores.s3.amazonaws.com/thor.jpg",
+      "info": "asfasfas fasfasf asfasfas afsfasf asfasfasf",
+      "id": 1663282288020
     }
   ],
   "copiaHeroes": [

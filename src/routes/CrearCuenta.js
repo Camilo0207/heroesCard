@@ -1,11 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "../styles/CrearCuenta.module.css";
 import { helpValidaciones } from "../helpers/helpValidaciones";
 import { useApi } from "../hooks/useApi";
 import CrearCuentaForm from "../components/CrearCuentaForm";
 import { useNavigate } from "react-router-dom";
 import ThemeContext from "../context/ThemeContext";
-
+import {API_URL_USUARIOS} from "../constantes/constants"
+import axios from "axios";
 const initialForm = {
   name: "",
   lastname: "",
@@ -15,14 +16,58 @@ const initialForm = {
 };
 
 export default function CrearCuenta() {
-  const { createData, db } = useApi("http://localhost:5000/usuariosCreados");
+  //const { createData, db } = useApi("http://localhost:5000/usuariosCreados");
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const { validarCrearCuenta } = helpValidaciones();
   const navigate = useNavigate();
   const {theme} = useContext(ThemeContext)
+  const [db, setDb] = useState(null)
+  const [errorDB, setErrorDB] = useState(null)
 
+  const api = axios.create();
+
+  useEffect(() => {
+    let isMounted = true; // Referencia de montaje
+    
+    const fetchData = async () => {
+      if (isMounted && !db ) {
+        
+        try {
+          const response = await api.get(API_URL_USUARIOS);
+          if (!response.data.err && isMounted) {
+            setErrorDB(null);
+            setDb(response.data);
+          } else {
+            setErrorDB(response.data);
+          }
+        } catch (error) {
+          setErrorDB(error);
+        }
+      }
+    };
+    
+    fetchData();
+    
+    return () => {
+      isMounted = false; // Establecer la referencia de montaje a falso al desmontar
+    };
+  }, [API_URL_USUARIOS,db]);
+
+  const createData = (data) => {
+    api.post(API_URL_USUARIOS, data)
+    .then((res) => {
+      if (!res.data.err) {
+          setDb((prevData) => [...prevData, res.data]);
+        } else {
+          setErrorDB(res.data);
+        }
+      })
+      .catch((err) => {
+        setErrorDB(err);
+      });
+  };
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -45,7 +90,7 @@ export default function CrearCuenta() {
       setTimeout(() => {
         setLoading(false);
         handleReset(e);
-        navigate("/");
+        navigate("/index.html");
       }, 3000);
     } else {
       return;

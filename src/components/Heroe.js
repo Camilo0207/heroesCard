@@ -38,11 +38,11 @@ export default function Heroe({heroe,/*openModalPortal,*/ deleteData,updateData,
         alt={`Imagen de ${heroe.name}`}
       />
       <div className={styles.logoCorazon}>
-        <img src="https://i.imgur.com/0WaUqwo.png" alt="Logo de un corazon" />
+        <img src="https://imgs-herores.s3.amazonaws.com/corazon.png" alt="Logo de un corazon" />
         <img
           className={styles.delete}
           onClick={() => deleteData(heroe.id)}
-          src="https://i.imgur.com/9niMmHZ.png"
+          src="https://imgs-herores.s3.amazonaws.com/equis-roja.png"
           alt="Logo de imagen para cerrar"
         />
       </div>

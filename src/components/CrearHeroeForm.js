@@ -6,7 +6,10 @@ import flecha from "../assets/img/flecha.png";
 import { helpValidaciones } from "../helpers/helpValidaciones";
 import { useApi } from "../hooks/useApi";
 import { useNavigate } from "react-router-dom";
-import ThemeContext from '../context/ThemeContext';
+import ThemeContext from "../context/ThemeContext";
+import axios from "axios";
+import { API_URL } from "../constantes/constants";
+
 
 const initialForm = {
   name: "",
@@ -26,11 +29,29 @@ export default function CrearHeroeForm({
   const [activeBg, setActiveBg] = useState(false);
   const [activeImg, setActiveImg] = useState(false);
   const { validarNuevoHeroe } = helpValidaciones();
-  const { createData } = useApi("http://localhost:5000/heroes");
+  //const { createData } = useApi(API_URL);
   const navigate = useNavigate();
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
-  const {theme} = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
+  const [db, setDb] = useState(null);
+  const [error, setError] = useState(null);
+  const [requestCount, setRequestCount] = useState(0);
+  const api = axios.create();
+
+  const createData = (data) => {
+    api.post(API_URL, data)
+    .then((res) => {
+      if (!res.data.err) {
+          setDb((prevData) => [...prevData, res.data]);
+        } else {
+          setError(res.data);
+        }
+      })
+      .catch((err) => {
+        setError(err);
+      });
+  };
 
   useEffect(() => {
     if (config) {
@@ -67,6 +88,7 @@ export default function CrearHeroeForm({
         closeModalPortal();
       } else {
         createData(form);
+       
         setLoading(true);
         setTimeout(() => {
           setLoading(false);
@@ -97,7 +119,11 @@ export default function CrearHeroeForm({
         />
         {errors && <p className={styles.error}>{errors.name}</p>}
 
-        <div className={`${styles.escoger} ${theme==="dark" && styles.darkMode}`} onClick={handleShow} id="background">
+        <div
+          className={`${styles.escoger} ${theme === "dark" && styles.darkMode}`}
+          onClick={handleShow}
+          id="background"
+        >
           <p id="background">Escoge un fondo</p>
           <img id="background" src={flecha} alt={"Logo flecha"} />
         </div>
@@ -116,7 +142,11 @@ export default function CrearHeroeForm({
         )}
         {errors && <p className={styles.error}>{errors.backGround}</p>}
 
-        <div className={`${styles.escoger} ${theme==="dark" && styles.darkMode}`} onClick={handleShow} id="imgProfile">
+        <div
+          className={`${styles.escoger} ${theme === "dark" && styles.darkMode}`}
+          onClick={handleShow}
+          id="imgProfile"
+        >
           <p id="imgProfile">Escoge una imagen de tu personaje</p>
           <img id="imgProfile" src={flecha} alt={"Logo flecha"} />
         </div>

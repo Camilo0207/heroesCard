@@ -11,9 +11,8 @@ export const helpHttps =()=>{
         options.headers = options.headers 
             ? { ...defaultHeader, ...options.headers }
             :defaultHeader;
-
         options.body = JSON.stringify(options.body) || false
-        if(!options.body) delete options.body
+        if(!options.body) delete options.body;
 
         setTimeout(() => {
            controller.abort() 
@@ -36,6 +35,7 @@ export const helpHttps =()=>{
     }
 
     const get =(endpoint,options={})=>{
+        console.log("solicitud");
         return customFetch(endpoint,options)
     }
 

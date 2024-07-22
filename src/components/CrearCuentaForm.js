@@ -95,7 +95,7 @@ export default function CrearCuentaForm({errors,onChange,onSubmit,onBlur,onReset
               />
             </div>
           </form>
-          <p>¿Ya tenés una cuenta? {<Link to={"/"}>Ingresár</Link>}</p>
+          <p>¿Ya tenés una cuenta? {<Link to={"/index.html"}>Ingresár</Link>}</p>
         </div>
   )
 }
